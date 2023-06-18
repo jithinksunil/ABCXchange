@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    background-color: green;
+    position: relative;
+}
+
+.searchBoxContainer {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    border-radius: 2rem;
+    width: 50%;
+    background-color: gray;
+}
+
+#searchBox {
+    box-sizing: border-box;
+    height: 3rem;
+    width: 100%;
+    font-size: 2rem;
+    outline: 0;
+    border: 1px solid gray;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: green;
+}
+
+#searchBox:hover,#searchBox:focus {
+    background-color: gray;
+}
+.list:hover,.list:focus{
+background-color: red;
+}
+.sufix{
+    color: red;
+}
+.prefix{
+    color: green;
+}
+

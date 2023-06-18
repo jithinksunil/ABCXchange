@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search page</title>
+</head>
+
+<body>
+    <div class="container">
+        <button id="switch" onclick="toggleMode()">Night</button>
+        <div class="searchBoxContainer">
+            <input id="searchBox" type="text" oninput="autoSuggestion(this,event)">
+            <div id="suggestionBanner"></div>
+        </div>
+    </div>
+    <link rel="stylesheet" id="myStyle" href="./static/styleSheetDay.css">
+    <script src="./static/javaScript.js"></script>
+    <script>
+        let searchBox = document.getElementById("searchBox")
+        searchBox.focus()
+        searchBox.onkeydown = (event) => {
+            if (event.key == "ArrowDown") {
+                event.preventDefault();
+                document.getElementById('list0')?.focus()
+            }
+            if (event.key == 'Enter' && searchBox.value) {
+                let value = searchBox.value
+                searchBox.value = ''
+                searchBox.value = value
+                searchBox.focus()
+                autoSuggestion(searchBox)
+            }
+        };
+    </script>
+    <script>
+        const toggleMode = () => {
+            const element = document.getElementById('myStyle')
+            if (element.getAttribute('href') === "./static/styleSheetNight.css") {
+                element.href = "./static/styleSheetDay.css"
+            } else {
+                element.href = "./static/styleSheetNight.css"
+            }
+        }
+    </script>
+</body>
+
+</html>
