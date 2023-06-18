@@ -6,7 +6,7 @@ class TrieNode {
     }
 }
 
-class Trie {
+export class Trie {
     constructor() {
         this.root = new TrieNode(true)
     }
@@ -27,7 +27,6 @@ class Trie {
     }
 
     suggestions(prefix) {
-        console.log(prefix);
         let wordArray = []
         let currentNode = this.root
         let word=''
@@ -43,7 +42,7 @@ class Trie {
         if (word===prefix) {
             wordArray = this.dfs(currentNode)
         }
-        return wordArray.map((element) => prefix + element)
+        return wordArray.map((element) => [prefix , element])
     }
 
     dfs(currentNode) {
@@ -64,3 +63,4 @@ class Trie {
 
     }
 }
+

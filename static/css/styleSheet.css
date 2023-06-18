@@ -5,7 +5,6 @@ body {
 .container {
     height: 100vh;
     display: flex;
-    background-color: gray;
     position: relative;
 }
 
@@ -14,7 +13,6 @@ body {
     top: 40%;
     left: 25%;
     border-radius: 2rem;
-    background-color: green;
     width: 50%;
 }
 
@@ -24,23 +22,8 @@ body {
     width: 100%;
     font-size: 2rem;
     outline: 0;
-    border: 1px solid green;
     border-radius: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    background-color: gray;
-}
-
-#searchBox:hover,#searchBox:focus {
-    background-color: gray;
-}
-.list:hover,.list:focus{
-background-color: red;
-}
-.sufix{
-    color: red;
-}
-.prefix{
-    color: black;
 }
 

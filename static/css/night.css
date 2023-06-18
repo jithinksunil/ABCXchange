@@ -1,0 +1,26 @@
+.container {
+    background-color: gray;
+}
+
+.searchBoxContainer {
+    background-color: green;
+}
+
+#searchBox {
+    border: 1px solid green;
+    background-color: gray;
+}
+
+#searchBox:hover,#searchBox:focus {
+    background-color: gray;
+}
+li:hover, li:focus{
+background-color: red;
+}
+.sufix{
+    color: red;
+}
+.prefix{
+    color: black;
+}
+
