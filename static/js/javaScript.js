@@ -1,5 +1,8 @@
 import { Trie } from "./TrieDS.js";
+
 const searchBox = document.getElementById('searchBox')
+
+//cross bar implementaions
 const cross=document.getElementById('cross')
 cross.onclick=()=>{
     searchBox.value=''
@@ -14,6 +17,7 @@ document.onclick = (event) => {
     }
 }
 
+//search box implementations
 searchBox.oninput = (event) => {
     autoSuggestion(event)
 }
@@ -33,8 +37,9 @@ searchBox.onkeydown = (event) => {
     }
 };
 
+//trie implementations
 const mySuggestionTrie = new Trie()
-const wordsArray = ["apple", "anjana", "banana", "cherry", "mango", "orange", "strawberry", "watermelon"];
+const wordsArray = ["apple","apricot","aubergine", "avacardo", "banana",'blackberry',"cashew", "cherry",'mulberry', "mango","olives", "orange","sapodilla ", "strawberry", "watermelon", 'white mulberry'];
 wordsArray.map((item) => {
     mySuggestionTrie.insertWord(item.toLowerCase())
 })
@@ -42,17 +47,21 @@ wordsArray.map((item) => {
 function autoSuggestion(event) {
     const prefixLength = searchBox.value.length
     const suggestions = mySuggestionTrie.suggestions(searchBox.value)
+
+    //cross bar part
     if(searchBox.value.length){
         cross.style.display='block'
     }else{
         cross.style.display='none'
     }
 
+    //auto select implementations
     if (suggestions.length && event?.inputType !== "deleteContentBackward") {
         searchBox.value = suggestions[0][0] + suggestions[0][1]
         selectSufix(prefixLength)
     }
 
+    //suggestion list implementations
     const suggestionBanner = document.getElementById('suggestionBanner')
     suggestionBanner.innerHTML = ""
 
@@ -112,6 +121,7 @@ function autoSuggestion(event) {
     }
 }
 
+//auto select part
 function selectSufix(prefix) {
     searchBox.setSelectionRange(prefix, searchBox.value.length);
 }
