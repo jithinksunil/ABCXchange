@@ -16,6 +16,10 @@
     color: rgb(200, 200, 200);
 }
 
+#searchBox::placeholder{
+    color: rgb(23, 23, 23);
+}
+
 #searchBox:hover,
 #searchBox:focus {
     background-color: rgb(29, 29, 29, 0.5);
