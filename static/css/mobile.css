@@ -1,0 +1,8 @@
+@media(max-width:768px){
+    .searchSuggestionContainer {
+        width: 85%;
+    }
+    #keeper{
+        top: 30%;
+    }
+}

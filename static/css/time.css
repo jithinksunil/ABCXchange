@@ -1,0 +1,11 @@
+#time{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+}
+#stamp{
+    font-size: 3rem;
+}
