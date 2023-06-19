@@ -1,10 +1,12 @@
 import { Trie } from "./TrieDS.js";
 const searchBox = document.getElementById('searchBox')
-// const cross=document.getElementById('cross')
-// cross.onclick=()=>{
-//     searchBox.value=''
-//     searchBox.focus()
-// }
+const cross=document.getElementById('cross')
+cross.onclick=()=>{
+    searchBox.value=''
+    searchBox.focus()
+    document.getElementById('suggestionBanner').innerHTML=''
+}
+
 let searchSuggestionContainer = document.getElementById('searchSuggestionContainer')
 document.onclick = (event) => {
     if (!searchSuggestionContainer?.contains(event.target)&&searchBox.value) {
@@ -40,6 +42,11 @@ wordsArray.map((item) => {
 function autoSuggestion(event) {
     const prefixLength = searchBox.value.length
     const suggestions = mySuggestionTrie.suggestions(searchBox.value)
+    if(searchBox.value.length){
+        cross.style.display='block'
+    }else{
+        cross.style.display='none'
+    }
 
     if (suggestions.length && event?.inputType !== "deleteContentBackward") {
         searchBox.value = suggestions[0][0] + suggestions[0][1]
@@ -90,7 +97,6 @@ function autoSuggestion(event) {
                     previousRow.focus()
                 }
                 if (e.key === "Enter") {
-                    console.log('enter');
                     searchBox.value = ''
                     searchBox.value = item[0] + item[1]
                     searchBox.focus()

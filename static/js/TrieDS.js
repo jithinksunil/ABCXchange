@@ -29,20 +29,20 @@ export class Trie {
     suggestions(prefix) {
         let wordArray = []
         let currentNode = this.root
-        let word=''
+        let word = ''
         for (let i = 0; i < prefix.length; i++) {
             if (currentNode.children[prefix[i]]) {
                 currentNode = currentNode.children[prefix[i]]
-                word=word+currentNode.value
+                word = word + currentNode.value
             }
             else {
                 break;
             }
         }
-        if (word===prefix) {
+        if (word === prefix) {
             wordArray = this.dfs(currentNode)
         }
-        return wordArray.map((element) => [prefix , element])
+        return wordArray.map((element) => [prefix, element])
     }
 
     dfs(currentNode) {

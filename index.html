@@ -8,18 +8,18 @@
 </head>
 
 <body>
+
     <div class="container">
         <label id="toggleContainer">
-            <input id="toggleCheckBox" type="checkbox">
+            <input type="checkbox" id="toggleCheckBox" >
             <div id="toggle"></div>
         </label>
-        <p id="time">
-        </p>
+        <p id="time"></p>
         <div id="keeper">
-            <div class="searchSuggestionContainer">
+            <div id="searchSuggestionContainer">
                 <div id="searchContainer">
                     <input id="searchBox" placeholder="Search here..." type="text">
-                    <!-- <p id="cross">&#10006</p> -->
+                    <p id="cross">&#10006</p>
                 </div>
                 <div id="suggestionBanner"></div>
             </div>
@@ -31,14 +31,15 @@
     <link rel="stylesheet" id="myStyle" href="./static/css/day.css">
     <link rel="stylesheet" id="myStyle" href="./static/css/toggle.css">
     <link rel="stylesheet" id="myStyle" href="./static/css/time.css">
+
     <script src="./static/js/javaScript.js" type="module"></script>
     <script src="./static/js/toggle.js"></script>
     <script src="./static/js/time.js"></script>
     <script>
-        
         let searchBox = document.getElementById("searchBox")
         searchBox.focus()
     </script>
+
 </body>
 
 </html>
