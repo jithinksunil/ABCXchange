@@ -8,21 +8,36 @@
 </head>
 
 <body>
-    <div class="container">
-        <button id="switch" onclick="toggleMode()">Night</button>
-        <div class="searchBoxContainer">
-            <input id="searchBox" type="text">
+    <div class="container"> 
+        <label id="toggleContainer">
+            <input id="toggleCheckBox" type="checkbox">
+            <div id="toggle"></div>
+        </label>
+
+        <div class="searchSuggestionContainer">
+            <div id="searchContainer">
+                <input id="searchBox" type="text">
+                <!-- <p id="cross">&#10006</p> -->
+            </div>
             <div id="suggestionBanner"></div>
         </div>
     </div>
 
     <link rel="stylesheet" href="./static/css/styleSheet.css">
     <link rel="stylesheet" id="myStyle" href="./static/css/day.css">
+    <link rel="stylesheet" id="myStyle" href="./static/css/toggle.css">
     <script src="./static/js/javaScript.js" type="module"></script>
     <script src="./static/js/toggle.js"></script>
     <script>
         let searchBox = document.getElementById("searchBox")
         searchBox.focus()
+        const cross = document.getElementById('cross')
+        console.log(cross);
+        cross.onclick = (e) => {
+            console.log('dfd');
+            searchBox.value = ''
+            searchBox.focus()
+        }
     </script>
 </body>
 

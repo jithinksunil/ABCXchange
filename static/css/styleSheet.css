@@ -1,29 +1,57 @@
 body {
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+li {
+    padding-left: 2rem;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+    outline: none;
 }
 
 .container {
     height: 100vh;
-    display: flex;
     position: relative;
 }
 
-.searchBoxContainer {
+.searchSuggestionContainer {
     position: absolute;
     top: 40%;
     left: 25%;
     border-radius: 2rem;
     width: 50%;
+    font-size: 1.3rem;
+}
+
+#searchContainer {
+    position: relative;
 }
 
 #searchBox {
+
     box-sizing: border-box;
     height: 3rem;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.2rem;
     outline: 0;
     border-radius: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
+#cross {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    margin: 0;
+    cursor: pointer;
+}

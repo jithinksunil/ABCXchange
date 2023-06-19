@@ -1,26 +1,40 @@
 .container {
-    background-color: green;
+    background-image: url('https://images.pexels.com/photos/15338034/pexels-photo-15338034/free-photo-of-colorful-hot-air-balloons.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.searchBoxContainer {
-    background-color: gray;
+.searchSuggestionContainer {
+    background-color: rgb(29, 29, 29, 0.5);
+    backdrop-filter: blur(8px);
 }
 
 #searchBox {
-    border: 1px solid gray;
-    background-color: green;
+    border: none;
+    background-color: rgb(29, 29, 29, 0.5);
+    color: rgb(200, 200, 200);
 }
 
-#searchBox:hover,#searchBox:focus {
-    background-color: gray;
-}
-li:hover, li:focus{
-background-color: red;
-}
-.sufix{
-    color: red;
-}
-.prefix{
-    color: green;
+#searchBox:hover,
+#searchBox:focus {
+    background-color: rgb(29, 29, 29, 0.5);
 }
 
+#cross {
+    color: rgb(200, 200, 200);
+}
+
+li:hover,
+li:focus {
+    background-color: rgb(29, 29, 29, 0.5);
+}
+
+.prefix {
+    color: rgb(200, 200, 200);
+    font-weight: bold
+}
+
+.sufix {
+    color: black;
+}

@@ -69,7 +69,7 @@ function autoSuggestion(event) {
             };
 
             row.onkeydown = (e) => {
-                event.preventDefault()
+                event?.preventDefault()
 
                 if (e.key === 'ArrowDown' && index < suggestions.length - 1) {
                     const nextRow = document.getElementById('row' + (index + 1))
@@ -80,6 +80,7 @@ function autoSuggestion(event) {
                     previousRow.focus()
                 }
                 if (e.key === "Enter") {
+                    console.log('enter');
                     searchBox.value = ''
                     searchBox.value = item[0] + item[1]
                     searchBox.focus()

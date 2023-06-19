@@ -1,26 +1,40 @@
 .container {
-    background-color: gray;
+    background-image: url('https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.searchBoxContainer {
-    background-color: green;
+.searchSuggestionContainer {
+    background-color: rgba(153, 153, 153, 0.5);
+    backdrop-filter: blur(8px);
 }
 
 #searchBox {
-    border: 1px solid green;
-    background-color: gray;
+    border: none;
+    background-color: rgba(135, 135, 135, 0.5);
+    color: rgb(200, 200, 200);
 }
 
-#searchBox:hover,#searchBox:focus {
-    background-color: gray;
+#searchBox:hover,
+#searchBox:focus {
+    background-color: rgb(29, 29, 29, 0.5);
 }
-li:hover, li:focus{
-background-color: red;
+
+#cross {
+    color: rgb(200, 200, 200);
 }
-.sufix{
-    color: red;
+
+li:hover,
+li:focus {
+    background-color: rgb(29, 29, 29, 0.5);
 }
-.prefix{
+
+.prefix {
+    color: rgb(200, 200, 200);
+    font-weight: bold
+}
+
+.sufix {
     color: black;
 }
-
