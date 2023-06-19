@@ -5,4 +5,7 @@
     #keeper{
         top: 30%;
     }
+    #time{
+        display: none;
+    }
 }
