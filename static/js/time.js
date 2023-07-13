@@ -5,6 +5,9 @@ function updateTime() {
     minutes=minutes<10?'0'+minutes:minutes
     const stamp = hours >= 12 ? 'PM' : 'AM'
     hours = hours % 12
+    if(hours==0){
+        hours=12
+    }
     const finalTime = hours + ":" + minutes + " ";
     const banner = document.getElementById('time')
     banner.innerHTML = finalTime;
